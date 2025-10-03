@@ -1,0 +1,376 @@
+/* CSS BY Danny Lane */
+
+/* IMPORTED FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ROOT VARIABLES */
+:root {
+--midnight-blue: #1F2A44;
+--olive-green: #76885B;
+--champagne-gold: #E5C185;
+--linen: #F8F4EC;
+--dark-charcoal: #2B2B2B;
+--soft-white: #FAF9F6;
+}
+
+/* GLOBAL STYLES (mobile first/small) */
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.6;
+  color: var(--dark-charcoal);
+  background-color: var(--soft-white);
+}
+
+
+img {
+  display: inline-flex;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,h2,h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.5em;
+  color: var(--soft-white);
+  text-align: left;
+  margin: 0;
+}
+
+h2 {
+  font-size: 32px;
+  text-align: left;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  font-style: italic;
+  text-align: left;
+}
+
+p {
+    text-align: left;
+}
+
+header {
+  background-color: var(--midnight-blue);
+  color: var(--soft-white);
+  text-align: center;
+  padding: 32px 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.5em;
+  margin-top: -15px;
+  margin-top: 10px;
+}
+header nav {
+    width: 100%;
+    margin-bottom: -16px;
+    
+}
+
+header nav ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  background-color: var(--champagne-gold);
+  color: var(--dark-charcoal);
+}
+
+header nav a {
+  display: inline-flex;
+  text-decoration: none;
+  color: var(--dark-charcoal);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: var(--font-body);
+  transition: color 0.3s;
+  padding:15px;
+  width: 33.33%;
+  white-space: nowrap;
+}
+
+
+#offerings {
+  display: grid;
+  gap: 15px;
+  padding: 30px 15px;
+}
+
+.offering1, .offering2, .offering3 {
+  background-color: var(--olive-green);
+  color: var(--soft-white);
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.offering ul {
+  list-style: none;
+  padding: 0;
+}
+
+.offering li {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.offering p, .offering li {
+  color: var(--soft-white);
+}
+
+#gallery {
+  padding: 30px 15px;
+}
+
+.gallery-grid {
+  display: grid;
+  justify-items: center;
+  gap: 15px;
+  margin-top: 0;
+}
+
+.gallery-item {
+  text-align: center;
+  border: 1px solid var(--linen);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.gallery-item p {
+  font-size: 1.4em;
+  padding: 5px 10px 10px 10px;
+  font-weight: 500;
+}
+
+.gallery-item img {
+  margin-bottom: 8px;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+}
+
+
+#gallery a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 18px;
+  background-color: var(--olive-green);
+  color: var(--soft-white);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  width: 92%;
+  text-align: center;
+  font-size: 1.5em
+}
+.caption {
+  font-style: italic;
+  font-size: 14px;
+  color: var(--dark-charcoal);
+  margin: 0;
+}
+
+footer {
+  background-color: var(--midnight-blue);
+  color: var(--soft-white);
+  text-align: center;
+  padding: 50px 15px;
+}
+
+footer p {
+  margin: auto;
+  text-align: center;
+}
+
+footer a {
+  color: var(--champagne-gold);
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+section {
+  border-top: 3px solid var(--champagne-gold);
+  padding-top: 30px;
+  margin: 40px;
+
+}
+
+main section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* MEDIA QUERY MEDIUM */
+@media (min-width: 600px) {
+  #offerings {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+   .offering1 {
+    grid-column: 1 / 2;
+    grid-row: 2;
+   }
+
+  .offering2 {
+    grid-column: 2 / 3;
+    grid-row: 2;
+  }
+
+  .offering3 {
+    grid-column: 1 / 3;
+    grid-row: 3;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #gallery a {
+  width: 97%;
+  }
+}
+
+/* MEDIA QUERY LARGE */
+@media (min-width: 900px) {
+
+  #offerings {
+    grid-template-columns: 1fr 1fr;
+  }
+
+   .offering1 {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+  .offering2 {
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
+
+  .offering3 {
+    grid-column: 1 / 4;
+    grid-row: 3;
+  }
+  
+  #offerings {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr 1fr; 
+  }
+
+  #gallery a {
+  width: 97%;
+  }
+
+ main {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+/* MEDIA QUERY EXTRA LARGE */
+@media (min-width: 1200px) {
+  
+ #offerings {
+    grid-template-columns: 1fr 1fr;
+  }
+
+   .offering1 {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+  .offering2 {
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
+
+  .offering3 {
+    grid-column: 1 / 4;
+    grid-row: 3;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  }
+
+  #gallery a {
+  width: 97%;
+  }
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
